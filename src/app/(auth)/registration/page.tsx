@@ -1,3 +1,5 @@
+import { AuthorizationPage } from '@/screens/auth/authorization';
+
 export default function Registration() {
-  return <>Регистрация</>;
+  return <AuthorizationPage />;
 }

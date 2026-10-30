@@ -5,7 +5,7 @@ import { cn } from "shared/lib/utils";
 
 import type { Metadata } from "next";
 
-import "./globals.css";
+import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
