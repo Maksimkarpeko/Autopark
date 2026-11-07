@@ -1,13 +1,20 @@
+"use client";
 import { Car } from "lucide-react";
 import Link from "next/link";
 
 import { APP_TEXT } from "@/shared/constants";
 
-export const HeaderLogo = () => {
+import type { FC } from "react";
+
+type HeaderLogoProps = {
+  isAuth: boolean;
+};
+
+export const HeaderLogo: FC<HeaderLogoProps> = ({ isAuth }) => {
   const { header } = APP_TEXT;
 
   return (
-    <Link href={"/"}>
+    <Link href={isAuth ? "/user-profile" : "/"}>
       <div className="flex">
         <div className="border bg-primary  w-10 h-10 flex justify-center items-center rounded-[10px]">
           <Car className="text-white" size={25} />

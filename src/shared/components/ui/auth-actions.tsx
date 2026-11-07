@@ -8,9 +8,9 @@ import type { FC } from "react";
 
 import { Button } from "./button";
 
-interface AuthActionsProps {
+type AuthActionsProps = {
   classname?: string;
-}
+};
 
 export const AuthActions: FC<AuthActionsProps> = ({ classname }) => {
   const route = useRouter();
@@ -23,7 +23,7 @@ export const AuthActions: FC<AuthActionsProps> = ({ classname }) => {
     route.push("/registration");
   };
   return (
-    <div className={cn("flex gap-5", classname)}>
+    <div className={cn("flex flex-col gap-5 lg:flex-row", classname)}>
       <Button onClick={onClickSignUp} className="bg-primary-800 text-white hover:bg-primary-900">
         <GraduationCap className="mr-2 h-4 w-4" />
         Зарегистрироваться на обучение

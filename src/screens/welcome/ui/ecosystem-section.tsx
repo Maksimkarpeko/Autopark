@@ -2,7 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 
 import { Card, CardContent } from "@/shared/components";
 
-import { roles } from '../constants/data';
+import { roles } from "../constants/data";
 
 export const EcosystemSection = () => {
   return (

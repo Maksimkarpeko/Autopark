@@ -1,12 +1,17 @@
+"use client";
 import { ArrowRight, LockKeyhole, Mail } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
+import { mockAuth } from "@/features/auth/api/mock-auth";
 import { Label, Input, Button } from "@/shared/components";
 
 import type { SignInFormValues } from "../schema/sign-in-schema";
 
 export const SignInForm = () => {
+  const route = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -22,6 +27,8 @@ export const SignInForm = () => {
 
   const onLoginSubmit = async (data: SignInFormValues) => {
     console.log("Login:", data);
+    await mockAuth();
+    route.push("/user-profile");
 
     // TODO: API request for login
   };

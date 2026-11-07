@@ -11,6 +11,7 @@ export const WelcomePage = () => {
       <Container>
         <div className="space-y-10 py-6 md:py-8">
           <HeroSection />
+          
           <ProgramSection />
 
           <EcosystemSection />

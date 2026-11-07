@@ -17,9 +17,11 @@ export const AuthorizationPage = () => {
           <div className="px-6 pt-7 sm:px-8">
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary-800 text-white">
-                  <GraduationCap className="h-6 w-6" />
-                </div>
+                <Link href={"/"}>
+                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary-800 text-white">
+                    <GraduationCap className="h-6 w-6" />
+                  </div>
+                </Link>
 
                 <div>
                   <p className="text-sm font-bold tracking-wide">АВТОШКОЛА</p>

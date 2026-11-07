@@ -5,9 +5,9 @@ import { Card, CardContent, CardTitle } from "@/shared/components";
 import type { Program } from "../types/program-type";
 import type { FC } from "react";
 
-interface ProgramCardProps {
+type ProgramCardProps = {
   program: Program;
-}
+};
 
 export const ProgramCard: FC<ProgramCardProps> = ({ program }) => {
   const ProgramIcon = program.icon === "bike" ? Bike : program.icon === "truck" ? Truck : Bus;
