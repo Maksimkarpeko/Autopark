@@ -38,14 +38,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         inter.variable,
       )}
     >
-      <body className="min-h-screen flex flex-col">
+      <body className="h-screen flex flex-col overflow-hidden">
         <Suspense fallback={<div className="h-20 border-b" />}>
           <Header />
         </Suspense>
-        <div className="flex">
+
+        <div className="flex flex-1 min-h-0 overflow-hidden">
           <HeaderSideBar />
 
-          <main className="bg-[#f3f5fc] flex-1">{children}</main>
+          <main className="flex-1 min-w-0 min-h-0 overflow-y-auto bg-[#f3f5fc]">{children}</main>
         </div>
       </body>
     </html>

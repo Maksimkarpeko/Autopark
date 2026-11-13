@@ -1,7 +1,9 @@
-export default function UserProfile () {
+import { UserProfile } from "@/screens/user";
+
+export default function Page() {
   return (
     <div>
-      <h1>Вот так </h1>
+      <UserProfile />
     </div>
-  )
+  );
 }

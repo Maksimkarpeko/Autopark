@@ -5,3 +5,5 @@ export * from "./ui/checkbox";
 export * from "./ui/label";
 export * from "./ui/input";
 export * from "./ui/auth-actions";
+export * from "./ui/badge"
+export * from "./ui/progress"
